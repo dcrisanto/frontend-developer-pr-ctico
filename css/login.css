@@ -15,11 +15,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} 
 
 html {
     font-size: 62.5%;
-    font-family: 'Quicksand', sans-serif;;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .main-section {
@@ -33,29 +33,6 @@ html {
 
 .main-section .container-logo {
     margin-bottom: 48px;
-}
-
-.main-section .container-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.main-section .container-title h1 {
-    font-size: var(--lg);
-    font-weight: bold;
-    line-height: 2.2rem;
-    margin-bottom: 12px;
-    color: var(--black);
-}
-
-.main-section .container-title p {
-    margin-bottom: 32px;
-    font-size: var(--md);
-    font-weight: 400;
-    line-height: 2.2rem;
-    color: var(--text-input-field);
-    text-align: center;
 }
 
 .main-section .container-form {
@@ -72,17 +49,17 @@ html {
 .main-section .container-form .form .label {
     display: flex;
     flex-direction: column;
+}
+
+.main-section .container-form .form .label span {
+    margin-bottom: 4px;
     color: var(--black);
     font-size: var(--sm);
     font-weight: bold;
     line-height: var(--lg);
 }
 
-.main-section .container-form .form span {
-    margin-bottom: 4px;
-}
-
-.main-section .container-form .form .input {
+.main-section .container-form .form .label .input {
     height: 32px;
     padding: 12px;
     margin-bottom: 12px;
@@ -99,12 +76,17 @@ html {
     color: var(--text-input-field);
 }
 
-.main-section .container-button {
-    display: flex;
-    justify-content: center;
+.main-section .container-form .form .label .input-email {
+    margin-bottom: 22px;
 }
 
-.main-section .container-button .primary-button {
+.main-section .container-form .form .container-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-section .container-form .form .container-button .primary-button {
     width: 100%;
     min-width: 300px;
     height: 50px;
@@ -118,9 +100,39 @@ html {
     cursor: pointer;
 }
 
-.main-section .container-button .login-button {
-    margin: 14px 16px 30px;
+.main-section .container-form .form .container-button .login-button {
+    margin-top: 14px;
+    margin-bottom: 30px;
 }
 
+.main-section .container-form .form .container-button a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--hospital-green);
+}
 
+.main-section .container-secondary-button {
+    display: flex;
+    justify-content: center;
+}
 
+.main-section .container-secondary-button .secondary-button {
+    width: 100%;
+    min-width: 300px;
+    height: 50px;
+    border: 1px solid var(--hospital-green);
+    border-radius: 8px;
+    font-size: var(--md);
+    font-weight: bold;
+    line-height: 2.2rem;
+    color: var(--hospital-green);
+    background-color: var(--white);
+    cursor: pointer;
+}
+
+.main-section .container-secondary-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 40vh;
+}

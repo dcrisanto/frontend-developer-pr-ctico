@@ -1,0 +1,10 @@
+.main-section .container-logo {
+    display: none;
+}
+
+.main-section .container-secondary-button {
+    display: flex;
+    justify-content: center;
+    height: 52px;
+    margin-top: 52px;
+}
