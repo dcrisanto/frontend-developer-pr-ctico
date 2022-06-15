@@ -1,0 +1,123 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --background-input-field: #F7F7F7;
+    --text-input-field: #797979;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+    height: 50px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+}
+
+header .container-buttons {
+    display: none;
+}
+
+header .container-nav-right a {
+    display: none;
+}
+
+header .container-nav-right .icon-shopping-notification {
+    display: none;
+}
+
+.main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section .container-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-self: center;
+}
+
+.main-section .container-form .title {
+    margin-bottom: 44px;
+    font-size: var(--lg);
+    font-weight: bold;
+    line-height: 2.2rem;
+    color: var(--black);
+}
+
+.main-section .container-form .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section .container-form .form .label {
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    font-size: var(--sm);
+    font-weight: bold;
+    line-height: var(--lg);
+}
+
+.main-section .container-form .form span {
+    margin-bottom: 4px;
+}
+
+.main-section .container-form .form .input {
+    height: 32px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--md);
+    font-weight: 400;
+    line-height: 2rem;
+    color: var(--text-input-field);
+    background-color: var(--background-input-field);
+}
+
+.main-section .container-form .form .input-name, .input-email, .input-password {
+    margin-bottom: 24px;
+}
+
+.main-section .container-form .form input::placeholder {
+    color: var(--text-input-field);
+}
+
+.main-section .container-form .container-button {
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-section .container-form .primary-button {
+    width: 100%;
+    min-width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: var(--md);
+    font-weight: bold;
+    line-height: 2.2rem;
+    color: var(--white);
+    background-color: var(--hospital-green);
+    cursor: pointer;
+}
