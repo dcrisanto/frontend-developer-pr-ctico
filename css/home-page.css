@@ -1,0 +1,178 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --background-input-field: #F7F7F7;
+    --text-input-field: #797979;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+    height: 50px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+}
+
+header .container-buttons {
+    display: none;
+}
+
+header .container-nav-right a {
+    display: none;
+}
+
+header .container-nav-right .icon-shopping-notification {
+    display: none;
+}
+
+main .search-secction {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main .search-secction .input {
+    width: 300px;
+    height: 44px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: var(--very-light-pink);
+    background-color: var(--background-input-field);
+}
+
+main .buttons-secction {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .buttons-secction .button {
+    margin-right: 8px;
+    padding: 8px;
+    border: none;
+    text-align: center;
+    color: var(--very-light-pink);
+    background-color: var(--white);
+}
+
+main .buttons-secction .button:hover {
+    border: 1px solid var(--hospital-green);
+    border-radius: 8px;
+    color: var(--hospital-green);
+    cursor: pointer;
+}
+
+main .buttons-secction .button:focus {
+    border: 1px solid var(--hospital-green);
+    border-radius: 8px;
+    color: var(--hospital-green);
+    cursor: pointer;
+}
+
+main .order-secction {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+main .order-secction p:nth-child(1){
+    margin-right: 8px;
+    font-size: var(--sm);
+    font-weight: bold;
+    line-height: var(--lg);
+    color: var(--black);
+}
+
+main .order-secction p:nth-child(2){
+    font-size: var(--sm);
+    font-weight: 400;
+    line-height: var(--lg);
+    color: var(--text-input-field);
+}
+
+main .card-secction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .card-secction .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main .card-secction .container-card {
+    width: 170px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+main .card-secction .cards .container-card img {
+    width: 160px;
+    height: 160px;
+}
+
+main .card-secction .cards .container-card .product-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+}
+
+main .card-secction .cards .container-card .product-card p{
+    font-size: var(--sm);
+    line-height: var(--lg);
+}
+
+main .card-secction .cards .container-card .product-card p:nth-child(1){
+    font-weight: bold;
+    color: var(--dark);
+}
+
+
+main .card-secction .cards .container-card .product-card p:nth-child(2){
+    font-weight: 400;
+    color: var(--text-input-field);
+}
+
+main .card-secction .cards .container-card .product-card img{
+    width: 40px;
+    height: 40px;
+}
+
+@media (max-width:320px) {
+    main .card-secction .container-card {
+        width: 135px;
+        height: 250px;
+    }
+    
+    main .card-secction .cards .container-card img {
+        width: 130px;
+        height: 160px;
+    }
+}
