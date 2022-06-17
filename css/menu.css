@@ -1,0 +1,98 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --background-input-field: #F7F7F7;
+    --text-input-field: #797979;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.menu-secction {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.menu-secction .container-close {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.menu-secction .container-close .icon-close {
+    font-size: var(--lg);
+    font-weight: bold;
+    color: var(--very-light-pink);
+}
+
+.menu-left, .menu-account {
+    list-style: none;
+    font-size: var(--md);
+    font-weight: bold;
+    line-height: var(--lg);
+    color: var(--black);
+}
+
+.menu-secction .container-categories .menu-left {
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.item-menu, .item-account {
+    margin-bottom: 32px;
+}
+
+.menu-secction .container-account {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*display: none;*/
+}
+
+.menu-secction .container-access-login {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    display: none;
+}
+
+.menu-secction .container-account .container-signout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.menu-secction .container-account .container-signout p {
+    padding-bottom: 4px;
+    font-size: var(--sm);
+    font-weight: 300;
+    line-height: var(--lg);
+}
+
+.login, .signout {
+    text-decoration: none;
+    font-size: var(--md);
+    font-weight: bold;
+    line-height: var(--lg);
+    color: var(--hospital-green);
+}

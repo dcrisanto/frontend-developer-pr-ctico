@@ -1,0 +1,48 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --background-input-field: #F7F7F7;
+    --text-input-field: #797979;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-secction {
+    align-items: flex-end;
+}
+
+.menu-secction .container-close, .container-categories, .container-access-login {
+    display: none;
+}
+
+.menu-secction .container-account {
+    width: 150px;
+    height: 190px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+    text-align: end;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.menu-secction .container-account .menu-account {
+    margin-top: 12px;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.menu-secction .container-account .container-signout {
+    justify-content: center;
+}
+
+.menu-secction .container-account .container-signout p {
+    display: none;
+}
