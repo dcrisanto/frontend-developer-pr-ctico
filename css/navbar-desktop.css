@@ -1,0 +1,86 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --background-input-field: #F7F7F7;
+    --text-input-field: #797979;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header nav .icon-menu {
+    display: none;
+}
+
+header nav .nav-left-secction .list-categories {
+    display: flex;
+}
+
+header nav .nav-right-secction .nav-account-card .item-account{
+    display: inline-block;
+}
+
+header nav .nav-left-secction {
+    display: flex;
+}
+
+header nav .nav-right-secction .nav-account-card {
+    display: flex;
+}
+
+header nav .list-categories, .nav-account-card {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header nav .nav-left-secction .list-categories {
+    margin-left: 40px;
+}
+
+header nav .nav-left-secction .list-categories .item {
+    margin-right: 20px;
+    padding: 8px;
+}
+
+header nav .nav-left-secction .list-categories .item:hover {
+    border: 1px solid var(--hospital-green);
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--hospital-green);
+}
+
+header nav .nav-left-secction .list-categories .item {
+    font-size: var(--sm);
+    font-weight: bold;
+    line-height: 2rem;
+    text-decoration: none;
+    color: var(--very-light-pink);
+}
+
+header nav .nav-right-secction .nav-account-card .item-account {
+    margin-right: 24px;
+    font-size: var(--sm);
+    font-weight: bold;
+    line-height: var(--lg);
+    color: var(--hospital-green);
+}
+
+header nav .nav-right-secction .nav-account-card  {
+    align-items: center;
+
+
