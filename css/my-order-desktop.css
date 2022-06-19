@@ -1,0 +1,98 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --background-input-field: #F7F7F7;
+    --text-input-field: #797979;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+header .container-image-logo {
+    display: flex;
+}
+
+header .nav-icon-menu, .title {
+    display: none;
+}
+
+header .container-buttons {
+    display: inline-block;
+}
+
+header .container-nav-right {
+    display: flex;
+}
+
+header .container-nav-right p {
+    display: flex;
+    margin-right: 32px;
+}
+
+header .container-buttons .button {
+    margin-right: 16px;
+    padding: 8px;
+    border: none;
+    text-align: center;
+    color: var(--very-light-pink);
+    background-color: var(--white);
+}
+
+header .container-buttons .button:hover {
+    border: 1px solid var(--hospital-green);
+    border-radius: 8px;
+    color: var(--hospital-green);
+    cursor: pointer;
+}
+
+header .container-buttons .button:focus {
+    border: 1px solid var(--hospital-green);
+    border-radius: 8px;
+    color: var(--hospital-green);
+    cursor: pointer;
+}
+
+header .container-nav-right {
+    display: flex;
+    align-items: center;
+}
+
+header .container-nav-right .icon-shopping {
+    display: none;
+}
+
+header .container-nav-right a {
+    display: inline-block;
+    margin-right: 24px;
+    font-size: var(--sm);
+    font-weight: bold;
+    line-height: var(--lg);
+    text-decoration: none;
+    color: var(--hospital-green);
+}
+
+header .container-nav-right .icon-shopping-notification {
+    display: inline-block;
+}
+
+main .secction-detail-order .title-order {
+    width: 400px;
+    display: flex;
+    text-align: start;
+    margin-bottom: 32px;
+    font-size: var(--lg);
+    font-weight: bold;
+    line-height: 2.2rem;
+    color: var(--lg);
+}
+
+main .secction-detail-order .products{
+    width: 400px;
+}
+
+main .secction-detail-order .product {
+    width: 400px;
+}

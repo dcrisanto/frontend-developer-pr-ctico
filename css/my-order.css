@@ -1,0 +1,114 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #FFFFFF;
+    --background-input-field: #F7F7F7;
+    --text-input-field: #797979;
+    --black: #000000;
+    --hospital-green: #ACD9B2;
+    --dark: #232830;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+    height: 50px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.046805);
+}
+
+header .container-buttons, .container-image-logo {
+    display: none;
+}
+
+header .container-nav-right {
+    display: flex;
+}
+
+header .container-nav-right p {
+    display: none;
+}
+
+main .secction-detail-order {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .secction-detail-order .title-order {
+    display: none;
+}
+
+main .secction-detail-order .products {
+    width: 330px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+    background-color: var(--background-input-field);
+}
+
+main .secction-detail-order .products-info p:nth-child(1), .products-price p, .product-price p {
+    font-size: var(--md);
+    font-weight: bold;
+    line-height: var(--lg);
+    color: var(--black);
+}
+
+main .secction-detail-order .products-info, .product-info p {
+    font-size: var(--sm);
+    font-weight: 400;
+    line-height: var(--lg);
+    color: var(--text-input-field);
+}
+
+main .secction-detail-order .products .products-price {
+    display: flex;
+}
+
+main .secction-detail-order .product {
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+main .secction-detail-order .product .product-info {
+    display: flex;
+    align-items: center;
+}
+
+main .secction-detail-order .product img {
+    width: 70px;
+    height: 70px;
+    margin-right: 16px;
+}
+
+@media (max-width: 320px) {
+    main .secction-detail-order .products {
+        width: 300px;
+    }
+
+    main .secction-detail-order .product {
+        width: 300px;
+    }
+}
+
