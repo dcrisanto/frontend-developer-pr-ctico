@@ -1,0 +1,23 @@
+aside {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+aside .main-secction  {
+    width: 380px;
+    height: 700px;
+}
+
+aside .main-secction .container-img .container-icon-close .icon-close {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 300px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--white);
+}
