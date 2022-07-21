@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tienda online</title>
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/navbar-desktop.css" media="screen and (min-width:800px)">
+    <link rel="stylesheet" href="./css/fusion-navbar-menu-mobile.css">
+    <link rel="stylesheet" href="./css/fusion-navbar-menu-desktop.css" media="screen and (min-width:800px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -31,16 +31,48 @@
             </div>
             <div class="nav-right-secction">
                 <ul class="nav-account-card">
-                    <li id="login" class="item-account"> Sign in</li>
-                    <li class="item item-email" id="email"><a>dorelly.crisanto@gmail.com</a></li>
+                    <li class="item item-account-navbar"> Sign in</li>
+                    <li class="item item-email" id="email">dorelly.crisanto@gmail.com</li>
                     <li class="item-cart">
                         <img class="icon-shopping-notification" src="./assets/icons/icon_shopping_cart_notification.svg" />
                     </li>
                 </ul>
                
             </div>
+            <section id="menu-main" class="menu-secction">
+                <div class="container-close display">
+                    <p class="icon-close">X</p>
+                </div>
+                <div class="container-categories display">
+                    <ul class="menu-left">
+                        <li class="item-menu">CATEGORIES</li>
+                        <li class="item-menu">All</li>
+                        <li class="item-menu">Clothes</li>
+                        <li class="item-menu">Electronics</li>
+                        <li class="item-menu">Furnitures</li>
+                        <li class="item-menu">Toys</li>
+                        <li class="item-menu">Others</li>
+                    </ul>
+                </div>
+                <div class="container-account display">
+                    <ul class="menu-account">
+                        <li class="item-account">My orders</li>
+                        <li class="item-account">My account</li>
+                    </ul>
+                    <div class="container-signout">
+                        <p>dorelly.crisanto@gmail.com</p>
+                        <a class="signout" href="">Sign out</a>
+                    </div>
+                </div>
+                <div class="container-access-login">
+                        <a class="login" href="">Log in</a>
+                </div>
+            </section>
         </nav>
     </header>
+    <main >
+       
+    </main>
     <script src="fusion-navbar-menu.js"></script>
 </body>
 </html>

@@ -30,9 +30,9 @@ header nav .nav-left-secction .list-categories {
   display: flex;
 }
 
-/*header nav .nav-right-secction .nav-account-card .item-account {
-  display: inline-block;
-}*/
+header nav .nav-right-secction .nav-account-card .item-account-navbar {
+  color: var(--hospital-green);
+}
 
 header nav .nav-left-secction {
   display: flex;
@@ -54,7 +54,6 @@ header nav .nav-left-secction .list-categories {
 }
 
 header nav .nav-left-secction .list-categories .item {
-  margin-right: 20px;
   padding: 8px;
 }
 
@@ -84,6 +83,51 @@ header nav .nav-right-secction .nav-account-card .item-account {
 
 header nav .nav-right-secction .nav-account-card {
   align-items: center;
+}
+
+/* styles menu */
+
+.menu-secction .container-account .container-signout p {
+  display: none;
+}
+
+.menu-secction {
+  align-items: flex-end;
+  top: 64px;
+  left: 0;
+}
+
+.menu-secction .container-account {
+  width: 150px;
+  height: 190px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.119789);
+  text-align: end;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.menu-secction .container-account .menu-account {
+  margin-top: 12px;
+  border-bottom: 1px solid var(--very-light-pink);
+}
+
+.menu-secction .container-account .container-signout {
+  justify-content: center;
+}
+
+.menu-secction .container-account .container-signout {
+  height: 30%;
+}
+
+.menu-secction .container-account .container-signout p {
+  display: none;
+}
+
+.container-close,
+.container-categories,
+.container-account,
+.container-access-login {
+  display: none;
 }
 
 .show {
