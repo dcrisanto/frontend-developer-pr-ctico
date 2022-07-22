@@ -137,3 +137,31 @@ header nav .nav-right-secction .nav-account-card {
 .hidden {
   display: none;
 }
+
+/* styles-shopping */
+
+aside {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+aside .carts-secction {
+  width: 380px;
+  align-items: flex-start;
+}
+
+aside .carts-secction .title {
+  display: flex;
+}
+
+aside .carts-secction .title img {
+  padding-right: 24px;
+}
+
+aside .carts-secction .title h1 {
+  font-size: var(--lg);
+  font-weight: bold;
+  line-height: 2.2rem;
+  color: var(--black);
+}
