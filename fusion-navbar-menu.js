@@ -1,14 +1,20 @@
 let userStatus = true;
 const signIn = document.querySelector('.item-account-navbar');
 const email = document.querySelector('.item-email');
-const menuMobile = document.querySelector('.icon-menu');
+const iconMenuMobile = document.querySelector('.icon-menu');
+const containerMenuMobile = document.querySelector('.menu-mobile');
+const containerMenuDesktop = document.querySelector('.menu-desktop');
 const closeIconMenu = document.querySelector('.icon-close');
-const containerClose = document.querySelector('.container-close');
-const containerCategories = document.querySelector('.container-categories');
-const containerAccount = document.querySelector('.container-account');
 const iconShopping = document.querySelector('.icon-shopping-notification');
-const cartsShopping = document.querySelector('.carts-secction');
+const cartsShopping = document.querySelector('#aside-shopping');
 const carts = document.querySelector('.cards');
+const cardProductSelected = document.querySelector('#aside-product');
+const priceProduct = document.querySelector('.price');
+const nameProduct = document.querySelector('.name-product');
+const descriptionProduct = document.querySelector('.description-product');
+const imageDetailProduct = document.querySelector('.image-detail-product');
+const containerCloseDetailProduct = document.querySelector('.container-icon-close');
+const arrowCloseShoppingCart = document.querySelector('#arrow-close-cart')
 
 const showEmail = () => {
     if(userStatus) {
@@ -22,102 +28,115 @@ const showEmail = () => {
 
 showEmail();
 
+
 const toogleMenuMobile = () => {
-    if(cartsShopping.classList.contains('display')){
-        containerClose.classList.toggle('display');
-        containerCategories.classList.toggle('display');
-        containerAccount.classList.toggle('display');
+    const isCartsShoppingClose = cartsShopping.classList.contains('hidden');
+    const isCardProductSelectedClose = cardProductSelected.classList.contains('hidden');
+    if(isCartsShoppingClose && isCardProductSelectedClose){
+        containerMenuMobile.classList.toggle('hidden');
     } else {
-        cartsShopping.classList.add('display');
-        containerClose.classList.toggle('display');
-        containerCategories.classList.toggle('display');
-        containerAccount.classList.toggle('display');
+        cartsShopping.classList.add('hidden');
+        cardProductSelected.classList.add('hidden');
+        containerMenuMobile.classList.toggle('hidden');
     }
 }
 
 const toogleMenuDesktop = () => {
-    const isCartsShoppingClose = cartsShopping.classList.contains('display');
-
-    if(isCartsShoppingClose){
-        containerAccount.classList.toggle('show');
+    const isCartsShoppingClose = cartsShopping.classList.contains('hidden');
+    const isCardProductSelectedClose = cardProductSelected.classList.contains('hidden');
+    
+    if(isCartsShoppingClose && isCardProductSelectedClose){
+        containerMenuDesktop.classList.toggle('hidden');
     } else {
-        cartsShopping.classList.add('display');
-        containerAccount.classList.toggle('show');
+        cartsShopping.classList.add('hidden');
+        cardProductSelected.classList.add('hidden');
+        containerMenuDesktop.classList.toggle('hidden');
     }
 }
 
 const toogleShopping = () => {
-    const isContainerAccountCloseMobile = containerAccount.classList.contains('display');
-    const isContainerAccountOpenDesktop = containerAccount.classList.contains('show');
+    const isContainerMenuMobileClose = containerMenuMobile.classList.contains('hidden');
+    const isContainerMenuDesktopClose = containerMenuDesktop.classList.contains('hidden');
+    const isCardProductSelectedClose = cardProductSelected.classList.contains('hidden');
 
-    if(isContainerAccountCloseMobile || isContainerAccountOpenDesktop) {
-        containerAccount.classList.remove('show');
-        containerClose.classList.add('display');
-        containerCategories.classList.add('display');
-        containerAccount.classList.add('display');
-        cartsShopping.classList.toggle('display');
+    if(isContainerMenuMobileClose && isContainerMenuDesktopClose && isCardProductSelectedClose){
+        cartsShopping.classList.toggle('hidden');
     } else {
-        containerClose.classList.add('display');
-        containerCategories.classList.add('display');
-        containerAccount.classList.add('display');
-        cartsShopping.classList.toggle('display');
+        containerMenuMobile.classList.add('hidden');
+        containerMenuDesktop.classList.add('hidden');
+        cardProductSelected.classList.add('hidden');
+        cartsShopping.classList.toggle('hidden');
     }
-    
+}
+
+const closeCartShopping = () => {
+    cartsShopping.classList.add('hidden');
 }
 
 email.addEventListener('click', toogleMenuDesktop);
-menuMobile.addEventListener('click', toogleMenuMobile);
+iconMenuMobile.addEventListener('click', toogleMenuMobile);
 closeIconMenu.addEventListener('click', toogleMenuMobile);
 iconShopping.addEventListener('click', toogleShopping);
+arrowCloseShoppingCart.addEventListener('click', closeCartShopping)
 
 const productList = [];
 productList.push(
     {
+        id: 1,
         name: 'Round shelf',
         price: 120.00,
         img: './assets/imgs/round_shelf.svg'
     },
     {
+        id: 2,
         name: 'Retro refigerator',
         price: 120.00,
         img: './assets/imgs/fridge.svg'
     },
     {
+        id: 3,
         name: 'Round shelf',
         price: 120.00,
         img: './assets/imgs/round_shelf.svg'
     },
     {
+        id: 4,
         name: 'Retro refigerator',
         price: 120.00,
         img: './assets/imgs/fridge.svg'
     },
     {
+        id: 5,
         name: 'Round shelf',
         price: 120.00,
         img: './assets/imgs/round_shelf.svg'
     },
     {
+        id: 6,
         name: 'Retro refigerator',
         price: 120.00,
         img: './assets/imgs/fridge.svg'
     },
     {
+        id: 7,
         name: 'Round shelf',
         price: 120.00,
         img: './assets/imgs/round_shelf.svg'
     },
     {
+        id: 8,
         name: 'Retro refigerator',
         price: 120.00,
         img: './assets/imgs/fridge.svg'
     },
     {
+        id: 9,
         name: 'Round shelf',
         price: 120.00,
         img: './assets/imgs/round_shelf.svg'
     },
     {
+        id: 10,
         name: 'Retro refigerator',
         price: 120.00,
         img: './assets/imgs/fridge.svg'
@@ -125,15 +144,51 @@ productList.push(
 
 );
 
+let detailProduct = {};
+
+const showProductSelected = (event) => {
+    const isContainerMenuMobileClose = containerMenuMobile.classList.contains('hidden');
+    const isContainerMenuDesktopClose = containerMenuDesktop.classList.contains('hidden');
+    const isCartsShoppingClose = cartsShopping.classList.contains('hidden');
+
+    const product = event.target.myParant;
+    detailProduct = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        img: product.img,
+        description: 'With its functional and practical interior, this refrigerator also fulfills a decorative function, adding personality and a retro-vintage aesthetic to your kitchen or workplace.'
+    };
+    nameProduct.innerText = detailProduct.name;
+    priceProduct.innerText = detailProduct.price;
+    descriptionProduct.innerText = detailProduct.description;
+    imageDetailProduct.setAttribute('src', detailProduct.img);
+    if(isContainerMenuMobileClose && isContainerMenuDesktopClose && isCartsShoppingClose){
+        cardProductSelected.classList.remove('hidden');
+    } else {
+        containerMenuMobile.classList.add('hidden');
+        containerMenuDesktop.classList.add('hidden');
+        cartsShopping.classList.add('hidden');
+        cardProductSelected.classList.remove('hidden');
+    }
+}
+
+const closeProductSelected = () => {
+    cardProductSelected.classList.add('hidden');
+};
+
+containerCloseDetailProduct.addEventListener('click', closeProductSelected);
 
 const renderProducts = (arr) => {
     const showProduct = arr.map((product) => {
-        // creando elemento cart de producto con sus atributos
-        const cartProduct = document.createElement('div');
-        cartProduct.classList.add('container-card')
+        // creando elemento card de producto con sus atributos
+        const cardProduct = document.createElement('div');
+        cardProduct.classList.add('container-card')
         // creando elemento img del producto con sus atributos
         const imageProduct = document.createElement('img');
         imageProduct.setAttribute('src', product.img);
+        imageProduct.addEventListener('click', showProductSelected);
+        imageProduct.myParant = product;
         // creando elemento contenedor de product
         const containerProduct = document.createElement('div');
         containerProduct.classList.add('product-card');
@@ -149,9 +204,9 @@ const renderProducts = (arr) => {
         const priceProduct = document.createElement('p');
         priceProduct.innerText = `$ ${product.price}`;
     
-        carts.appendChild(cartProduct);
-        cartProduct.appendChild(imageProduct);
-        cartProduct.appendChild(containerProduct);
+        carts.appendChild(cardProduct);
+        cardProduct.appendChild(imageProduct);
+        cardProduct.appendChild(containerProduct);
         containerProduct.appendChild(containerInfoProduct);
         containerProduct.appendChild(imageCart);
         containerInfoProduct.appendChild(priceProduct);
@@ -161,4 +216,7 @@ const renderProducts = (arr) => {
 }
 
 renderProducts(productList);
+
+/* show product-selected */
+
 

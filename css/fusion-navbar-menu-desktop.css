@@ -92,9 +92,11 @@ header nav .nav-right-secction .nav-account-card {
 }
 
 .menu-secction {
+  display: flex;
   align-items: flex-end;
   top: 64px;
-  left: 0;
+  padding: 0 51px 0 0;
+  background: none;
 }
 
 .menu-secction .container-account {
@@ -104,6 +106,7 @@ header nav .nav-right-secction .nav-account-card {
   text-align: end;
   padding: 8px;
   border-radius: 8px;
+  background-color: var(--white);
 }
 
 .menu-secction .container-account .menu-account {
@@ -123,43 +126,32 @@ header nav .nav-right-secction .nav-account-card {
   display: none;
 }
 
-.container-close,
-.container-categories,
-.container-account,
-.container-access-login {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-.hidden {
+.menu-mobile {
   display: none;
 }
 
 /* styles-shopping */
 
-aside {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+.aside-shopping-cart {
+  width: auto;
+  right: 0;
 }
 
-aside .carts-secction {
+aside .cards-shopping {
   width: 380px;
   align-items: flex-start;
 }
 
-aside .carts-secction .title {
+aside .cards-shopping .title {
   display: flex;
 }
 
-aside .carts-secction .title img {
+aside .cards-shopping .title img {
   padding-right: 24px;
+  cursor: pointer;
 }
 
-aside .carts-secction .title h1 {
+aside .cards-shopping .title h1 {
   font-size: var(--lg);
   font-weight: bold;
   line-height: 2.2rem;
@@ -204,6 +196,36 @@ aside .carts-secction .title h1 {
   height: 330px;
   margin-right: 4px;
 }
+
+/* styles de aside detail-product */
+
+.aside-detail-product {
+  width: auto;
+  right: 0;
+}
+
+.aside-detail-product .card-detail-product {
+  width: 380px;
+  height: 700px;
+}
+
+.aside-detail-product
+  .card-detail-product
+  .container-img
+  .container-icon-close
+  .icon-close {
+  right: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* mediaq de shopping products */
 
 @media (min-width: 1024px) {
   .section-home .card-secction .cards {
